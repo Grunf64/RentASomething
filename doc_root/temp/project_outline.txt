@@ -1,0 +1,50 @@
+Project outline for RentASomething
+
+Okvirni opis projekta
+
+Web alat ima podržavati više iznajmljivača [RentAProvider] koja mogu iznajmiti nešto, ili prodati izletničku kartu.
+
+Preprodavači [RentAReseller] imaju uvid u to nešto što se iznajmljuje, ili izlete.
+
+Kupci [RentAConsumer] iznajmljuju nešto što se iznajmljuje, ili kupuju izletničke karte.
+
+Nešto što se iznajmljuje je [RentingObject]; može biti bicikla, pedalina, moped i drugo.
+
+Izletnička karta je [ExcursionTicket]
+
+[RentASomething]
+- ima RentASomethingAdministrator
+- ima više RentAProdivera
+- ima više RentAResellera
+
+[RentAProvider]
+- ima svog [ProviderAdministrator]
+- ima više [ProviderUser]
+- ima više [RentingObject]
+- ima više [ExcursionTicket]
+- surađuje sa više [RentAProvider]
+- surađuje sa više [RentAReseller]
+
+[RentAReseller]
+- surađuje sa više [RentAProvider]
+- poznaje više [RentingObject]
+- poznaje više [ExcursionTicket]
+- stvara [RentAConsumer] i pridodaje ga instanci [RentingObject], ili [ExcursionTicket]  
+
+Pojašnjenje:
+
+[RentASomething]
+****************
+[RentASomething] je meta objekat, predstavlja cijeli koncept i postoji samo jedna instanca istoga u memoriji kod pokretanja programa.
+Ima [RentASomethingAdministrator] čija zadaća je da radi CRUD za [RentAProdiver] i [RentAReseller]
+
+[RentAProdiver]
+Pružatelj rente ima korist od programa u tome što mu se poslovna mreža jednostavno širi i bez velikih problema može reprodavati svoej usluge neposredno,
+ili preko posrednika.
+Posrednici su najčešće turističke agencije po naseljima, ili jaki iznajmljivači.
+Pružatelj rente stvara uslugu, prodaje ga direktno ili preko posrednika.
+
+[RentingObject] i [ExcursionTicket] - JE LI POTREBAN META ENTITET? 
+Usluga ima svoje instance - primjerice izlet ima broj mjesta koji se može prodati, najam pedalina ima 'n' pedalina koje se mogu odjednom iznajmiti.
+Instanca usluge jeste obračunska jedinica i u sebi poznaje uslugu, onoga tko ju je prodao i onoga tko ju je konzumirao.
+
