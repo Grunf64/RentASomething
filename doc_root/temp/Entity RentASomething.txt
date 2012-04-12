@@ -1,0 +1,3 @@
+Objekat RentASomething predstavlja aplikaciju, tj. ApplicationContext.
+
+RentASomething brine (CRUD) o RentAProvider i RentAReseller objektima i zna stvoriti RentAConsumer objekat.

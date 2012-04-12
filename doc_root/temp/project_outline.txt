@@ -44,7 +44,6 @@ ili preko posrednika.
 Posrednici su najčešće turističke agencije po naseljima, ili jaki iznajmljivači.
 Pružatelj rente stvara uslugu, prodaje ga direktno ili preko posrednika.
 
-[RentingObject] i [ExcursionTicket] - JE LI POTREBAN META ENTITET? 
+[RentingObject] i [ExcursionTicket] - meta-entitet [SomethingToSell]
 Usluga ima svoje instance - primjerice izlet ima broj mjesta koji se može prodati, najam pedalina ima 'n' pedalina koje se mogu odjednom iznajmiti.
 Instanca usluge jeste obračunska jedinica i u sebi poznaje uslugu, onoga tko ju je prodao i onoga tko ju je konzumirao.
-

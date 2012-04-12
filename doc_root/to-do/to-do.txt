@@ -1,4 +1,11 @@
 To do list for RentASomething project
 
-1) Make project outline
-2) 
+1) Završi sa stvaranjem entiteta RentASomething i veza prema objektima za koje je odgovoran
+
+2) Stvori skice ekrana koji predstavljaju glavne tokove radnji iz poslovne domene:
+	- ekran RentAResellera, onakav s kakvim će raditi svaki dan
+	- ekran RentAProvidera, onakav s kakvim će upravljati vlastitim SomethingToSell objektima i njihovim instancama
+	- početni ekran RentAProvidera 
+
+Done list:
+* Make project outline - DONE
